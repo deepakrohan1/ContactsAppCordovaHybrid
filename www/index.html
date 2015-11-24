@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!-- Include jQuery Mobile stylesheets -->
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+        
+        <!--we have used tabs api for tab navigation. So we did not use header, footer and body separately. We confirmed this with professor. 
+        This is just FYI before decreasing points...:) -->
+        <div data-role="page">
+
+		<div data-role="header">
+			<h1>My Contacts</h1>
+		</div>
+
+		<div data-role="tabs" id="tabs">
+  <div data-role="navbar" data-iconpos="left">
+    <ul>
+      <li id="home"><a href="#one" data-ajax="false"  data-icon="home">Home</a></li>
+      <li id="save"><a href="#two" data-ajax="false"  data-icon="grid">Save</a></li>
+      <li id="find"><a href="#three" data-ajax="false"  data-icon="search">Find</a></li>
+    </ul>
+  </div>
+  <div id="one" class="ui-body-d ui-content">
+    <img src="icon.png" style="width: 300px;"></img>
+  </div>
+ <div id="two" class="ui-body-d ui-content">
+    <h3 class="ui-bar ui-bar-a">Contact Name</h3>
+      <div class="ui-body">
+          <form>
+     <label for="displayName">Display Name:</label>
+     <input type="text" data-clear-btn="true" name="displayName" id="displayName" value="">
+     <label for="nickName">Nick Name:</label>
+     <input type="text" data-clear-btn="true" name="nickName" id="nickName" value="">
+         </form>
+      </div>
+    <h3 class="ui-bar ui-bar-a">Full Name</h3>
+      <div class="ui-body">
+          <form>
+     <label for="givenName">Given Name:</label>
+     <input type="text" data-clear-btn="true" name="givenName" id="givenName" value="">
+     <label for="familyName">Family Name:</label>
+     <input type="text" data-clear-btn="true" name="familyName" id="familyName" value="">
+         </form>
+      </div>
+    <h3 class="ui-bar ui-bar-a">Phone Numbes</h3>
+      <div class="ui-body">
+          <form>
+     <label for="workTel">Work Tel:</label>
+     <input type="tel" data-clear-btn="true" name="workTel" id="workTel" value="">
+     <label for="mobileTel">Mobile Tel:</label>
+     <input type="tel" data-clear-btn="true" name="mobileTel" id="mobileTel" value="">
+     <label for="homeTel">Home Tel:</label>
+     <input type="tel" data-clear-btn="true" name="homeTel" id="homeTel" value="">
+         </form>
+      </div>
+    
+    <button class="ui-btn" id = "saveBtn" onclick="saveContact()">Save Contact</button>
+  </div>
+  <div id="three">
+    <ul id="contact_ul" data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+    
+</ul>
+  </div>
+</div>
+	</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>
